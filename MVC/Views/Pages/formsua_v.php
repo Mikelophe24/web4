@@ -6,13 +6,13 @@
     <title>Document</title>
    
 </head>
-<link rel="stylesheet" href="http://localhost/thi%20gi%E1%BB%AFa%20h%E1%BB%8Dc%20k%C3%AC/Public/Css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost/thi%20gi%E1%BB%AFa%20h%E1%BB%8Dc%20k%C3%AC/Public/Css/dinhdang7.css">
-    <script src="http://localhost/thi%20gi%E1%BB%AFa%20h%E1%BB%8Dc%20k%C3%AC/Public/Js/jquery-3.3.1.slim.min.js"></script>
-    <script src="http://localhost/thi%20gi%E1%BB%AFa%20h%E1%BB%8Dc%20k%C3%AC/Public/Js/popper.min.js"></script>
-    <script src="http://localhost/thi%20gi%E1%BB%AFa%20h%E1%BB%8Dc%20k%C3%AC/Public/Js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="<?php echo URLROOT ?>/Public/Css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo URLROOT ?>/Public/Css/dinhdang7.css">
+    <script src="<?php echo URLROOT ?>/Public/Js/jquery-3.3.1.slim.min.js"></script>
+    <script src="<?php echo URLROOT ?>/Public/Js/popper.min.js"></script>
+    <script src="<?php echo URLROOT ?>/Public/Js/bootstrap.min.js"></script>
 <body>
-<form method="post" action="http://localhost/thi%20gi%e1%bb%afa%20h%e1%bb%8dc%20k%c3%ac%20%c4%91%e1%bb%81%203/formchinh_ctrl/suadl">
+<form method="post" action="<?php echo URLROOT ?>/formchinh_ctrl/suadl">
     <div class="form-group">
         <?php 
             if(isset($data['dulieu']) && mysqli_num_rows($data['dulieu'])>0){
@@ -33,7 +33,7 @@
         ?>   
         <br>
         <button type="submit" class="btn btn-primary" name="btnLuu">Lưu</button>
-        <a href="http://localhost/thi%20gi%e1%bb%afa%20h%e1%bb%8dc%20k%c3%ac%20%c4%91%e1%bb%81%203/formchinh_ctrl/timkiem1"  class="btn btn-primary" name="btnQuayLai">Quay Lại</a>                       
+        <a href="<?php echo URLROOT ?>/formchinh_ctrl/timkiem1"  class="btn btn-primary" name="btnQuayLai">Quay Lại</a>                       
     </div>
 </form>
 </body>

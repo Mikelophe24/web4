@@ -10,7 +10,7 @@
     </style>
 </head>
 <body>
-    <form method="post" action="http://localhost/thi%20gi%E1%BB%AFa%20h%E1%BB%8Dc%20k%C3%AC/Danhsachvanbang/timkiem">
+    <form method="post" action="<?php echo URLROOT ?>/Danhsachvanbang/timkiem">
         <div class="form-inline" >
             <label style="width: 100px;">Tên Văn Bằng</label>
             <input type="text" class="form-control dd2" name="txtTenVanBang" 
@@ -19,8 +19,10 @@
             <input type="text" class="form-control dd2" name="txtSoHieuVanBang" 
             value="<?php isset($data['sohieuvb']) ? isset($data['sohieuvb']) : '' ?>">
             <br>
-            <button type="submit" class="btn btn-success" name="btnTimkiem"><img src="http://localhost:80/73DCTT22_MVC/Public/Pictures/search.png" alt="">Tìm kiếm</button> &nbsp &nbsp
-            <a href="http://localhost/thi%20gi%E1%BB%AFa%20h%E1%BB%8Dc%20k%C3%AC/dethigiuaki" class="btn btn-success" name="btnTimkiem">Thêm</a>
+            <button type="submit" class="btn btn-success" name="btnTimkiem"><img src="<?php echo URLROOT ?>/Public/Pictures/search.png" alt="">Tìm kiếm</button> &nbsp &nbsp
+            Public\Pictures\search.png
+            <a href="<?php echo URLROOT ?>/dethigiuaki" class="btn btn-success" name="btnTimkiem">Thêm</a>
+
             <br>
          
         <table class="table table-striped">
@@ -46,8 +48,8 @@
                            <td><?php echo $row['tenvb'] ?></td>
                            <td><?php echo $row['sohieuvb'] ?></td>
                            <td>
-                                <a href="http://localhost/thi%20gi%E1%BB%AFa%20h%E1%BB%8Dc%20k%C3%AC/Danhsachvanbang/sua/<?php echo $row['id'] ?>" class="btn btn-outline-primary">Sửa</a> &nbsp;
-                                <a href="http://localhost/thi%20gi%E1%BB%AFa%20h%E1%BB%8Dc%20k%C3%AC/Danhsachvanbang/xoa/<?php echo $row['id'] ?>" class="btn btn-outline-danger">Xóa</a>
+                                <a href="<?php echo URLROOT ?>/Danhsachvanbang/sua/<?php echo $row['id'] ?>" class="btn btn-outline-primary">Sửa</a> &nbsp;
+                                <a href="<?php echo URLROOT ?>/Danhsachvanbang/xoa/<?php echo $row['id'] ?>" class="btn btn-outline-danger">Xóa</a>
                            </td>
                         </tr>
                 <?php

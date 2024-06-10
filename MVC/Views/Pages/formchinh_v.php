@@ -10,7 +10,7 @@
     </style>
 </head>
 <body>
-    <form method="post" action="http://localhost/thi%20gi%e1%bb%afa%20h%e1%bb%8dc%20k%c3%ac%20%c4%91%e1%bb%81%203/formchinh_ctrl/timkiem">
+    <form method="post" action="<?php echo URLROOT ?>/formchinh_ctrl/timkiem">
         <div class="form-inline" >
             <label style="width: 100px;">Mã môn học</label>
             <input type="text" class="form-control dd2" name="txtMaMonHoc" 
@@ -19,8 +19,8 @@
             <input type="text" class="form-control dd2" name="txtTenMonHoc" 
             value="<?php isset($data['tenmon']) ? isset($data['tenmon']) : '' ?>">
             <br>
-            <button type="submit" class="btn btn-success" name="btnTimkiem"><img src="http://localhost:80/73DCTT22_MVC/Public/Pictures/search.png" alt="">Tìm kiếm</button> &nbsp &nbsp
-            <a href="http://localhost/thi%20gi%e1%bb%afa%20h%e1%bb%8dc%20k%c3%ac%20%c4%91%e1%bb%81%203/formthem_ctrl" class="btn btn-success" name="btnTimkiem">Thêm</a>
+            <button type="submit" class="btn btn-success" name="btnTimkiem"><img src="<?php echo URLROOT ?>/Public/Pictures/search.png" alt="">Tìm kiếm</button> &nbsp &nbsp
+            <a href="<?php echo URLROOT ?>/formthem_ctrl" class="btn btn-success" name="btnTimkiem">Thêm</a>
             <br>
          
         <table class="table table-striped">
@@ -48,8 +48,8 @@
                            <td><?php echo $row['tenmon'] ?></td>
                            <td><?php echo $row['sotinchi'] ?></td>
                            <td>
-                                <a href="http://localhost/thi%20gi%e1%bb%afa%20h%e1%bb%8dc%20k%c3%ac%20%c4%91%e1%bb%81%203/formchinh_ctrl/sua/<?php echo $row['id'] ?>" class="btn btn-outline-primary">Sửa</a> &nbsp;
-                                <a href="http://localhost/thi%20gi%e1%bb%afa%20h%e1%bb%8dc%20k%c3%ac%20%c4%91%e1%bb%81%203/formchinh_ctrl/xoa/<?php echo $row['id'] ?>" class="btn btn-outline-danger">Xóa</a>
+                                <a href="<?php echo URLROOT ?>/formchinh_ctrl/sua/<?php echo $row['id'] ?>" class="btn btn-outline-primary">Sửa</a> &nbsp;
+                                <a href="<?php echo URLROOT ?>/formchinh_ctrl/xoa/<?php echo $row['id'] ?>" class="btn btn-outline-danger">Xóa</a>
                            </td>
                         </tr>
                 <?php
